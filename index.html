@@ -42,6 +42,39 @@
 		</script>
 	</head>
 	<body>
+		<section class="min-h-screen bg-gradient-to-b from-white to-[#FFF0D4] overflow-x-hidden text-gray-900 font-sans relative">
+			<!-- Navbar -->
+			<nav class="container mx-auto px-6 py-6 flex items-center justify-between relative z-50">
+				<!-- Logo -->
+				<div class="flex items-center w-[32px] h-[32px]">
+					<img src="public/Logo.svg" alt="Logo" class="w-full h-full" />
+				</div>
+
+				<div class="flex items-center gap-10">
+					<!-- Links -->
+					<div class="hidden md:flex items-center gap-10 text-[15px]">
+						<a href="#" class="text-primary hover:text-orange-500 transition-colors">Services</a>
+						<a href="#" class="text-gray-800 hover:text-primary transition-colors">About</a>
+						<a href="#" class="text-gray-800 hover:text-primary transition-colors">Contact</a>
+					</div>
+
+					<!-- CTA Button -->
+					<div class="hidden md:block">
+						<a
+							href="#"
+							class="inline-block bg-primary rounded-full px-6 py-2.5 text-[15px] shadow-brutal hover:translate-y-[2px] hover:translate-x-[2px] hover:shadow-brutal-hover transition-all text-bgLight"
+						>
+							Book a Free Consultation
+						</a>
+					</div>
+
+					<!-- Mobile Menu Button -->
+					<button class="md:hidden text-2xl text-black">
+						<i class="fa-solid fa-bars"></i>
+					</button>
+				</div>
+			</nav>
+		</section>
 		<script src="script.js"></script>
 	</body>
 </html>
