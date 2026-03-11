@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>LeadsBridge-UI</title>
+
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet" />
+
+		<!-- Font Awesome for icons -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="style.css" />
+
+		<!-- Tailwind CSS CDN -->
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						colors: {
+							primary: '#FFA500',
+							dark: '#1A1A1A',
+							bgLight: '#FFFFFF',
+							bgDark: '#151515',
+						},
+						fontFamily: {
+							sans: ['Oswald', 'sans-serif'],
+							heading: ['Oswald', 'sans-serif'],
+						},
+						boxShadow: {
+							brutal: '4px 4px 0px 0px rgba(0,0,0,1)',
+							'brutal-hover': '2px 2px 0px 0px rgba(0,0,0,1)',
+						},
+					},
+				},
+			};
+		</script>
+	</head>
+	<body>
+		<script src="script.js"></script>
+	</body>
+</html>
