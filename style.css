@@ -1,0 +1,115 @@
+/* Reset for smooth scrolling */
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+	color: red;
+	background: yellow;
+}
+
+/* 
+ * CSS Floating Animations 
+ * We use CSS for continuous floating motion, 
+ * independent of JS mouse parallax interactions.
+ */
+
+@keyframes floatLeft {
+	0% {
+		transform: translateY(0px) rotate(-12deg);
+	}
+	50% {
+		transform: translateY(-12px) rotate(-12deg);
+	}
+	100% {
+		transform: translateY(0px) rotate(-12deg);
+	}
+}
+
+@keyframes floatRight {
+	0% {
+		transform: translateY(0px) rotate(14deg);
+	}
+	50% {
+		transform: translateY(-15px) rotate(14deg);
+	}
+	100% {
+		transform: translateY(0px) rotate(14deg);
+	}
+}
+
+/* Applying animations to the floating cards */
+.css-float-left {
+	animation: floatLeft 6s ease-in-out infinite;
+}
+
+.css-float-right {
+	animation: floatRight 5s ease-in-out infinite;
+	animation-delay: 1.5s; /* Offset perfectly to create a delayed motion relative to left card */
+}
+
+/* Button Focus States Defaulting */
+button:focus,
+a:focus {
+	outline: none;
+}
+
+.wrap {
+	width: 100%;
+	height: 188px;
+	position: absolute;
+	top: -8px;
+	left: 8px;
+	overflow: hidden;
+}
+.wrap:before,
+.wrap:after {
+	content: '';
+	position: absolute;
+}
+.wrap:before {
+	width: 40px;
+	height: 8px;
+	right: 100px;
+	background: #4d6530;
+	border-radius: 8px 8px 0px 0px;
+}
+.wrap:after {
+	width: 8px;
+	height: 40px;
+	right: 0px;
+	top: 100px;
+	background: #4d6530;
+	border-radius: 0px 8px 8px 0px;
+}
+.ribbon6 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 200px;
+	height: 50px;
+	color: #ffff;
+	line-height: 10px;
+	position: absolute;
+	top: 30px;
+	right: -50px;
+	z-index: 2;
+	overflow: hidden;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+	box-shadow:
+		0 0 0 3px #505960,
+		0px 21px 5px -18px rgba(0, 0, 0, 0.6);
+	background: #505960;
+	text-align: center;
+}
+
+.ribbon {
+	position: relative;
+}
